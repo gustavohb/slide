@@ -12,9 +12,12 @@ public class LevelLoader : MonoBehaviour
 
     [SerializeField] private GameEvent _levelCompletedEvent = default;
 
+    [SerializeField] private GameEvent _reloadLevelEvent = default;
+
     private void Start()
     {
         _levelCompletedEvent?.AddListener(LoadNextLevel);
+        _reloadLevelEvent?.AddListener(ReloadLevel);
     }
 
     public void LoadNextLevel()
@@ -54,6 +57,7 @@ public class LevelLoader : MonoBehaviour
     private void OnDestroy()
     {
         _levelCompletedEvent?.RemoveListener(LoadNextLevel);
+        _reloadLevelEvent?.RemoveListener(ReloadLevel);
     }
 
 }

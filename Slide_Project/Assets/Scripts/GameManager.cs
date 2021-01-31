@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameEvent _blueSliderOutEvent = default;
     [SerializeField] private GameEvent _pinkSliderOutEvent = default;
     [SerializeField] private GameEvent _levelCompletedEvent = default;
+    [SerializeField] private GameEvent _reloadLevelEvent = default;
 
     public  const string CURRENT_LEVEL_PLAYERPREFS = "currentLevel";
     private const string MAX_LEVEL_ACHIEVED_PLAYERPREFS = "maxLevelAchieved";
@@ -65,8 +66,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        //TODO
-        Debug.Log("RestarLevel");
+        _reloadLevelEvent?.Raise();
     }
 
     private void SaveLevelPosition()

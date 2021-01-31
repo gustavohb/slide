@@ -234,6 +234,7 @@ MonoBehaviour:
   _transition: {fileID: 7173760100712911054}
   _transitionTime: 0.5
   _levelCompletedEvent: {fileID: 11400000, guid: 4cde089823ebf44b89d0b6c70b8c331c, type: 2}
+  _reloadLevelEvent: {fileID: 11400000, guid: 105d205b0c2864c1786e9d5fc505509d, type: 2}
 --- !u!1 &7173760100943203165
 GameObject:
   m_ObjectHideFlags: 0

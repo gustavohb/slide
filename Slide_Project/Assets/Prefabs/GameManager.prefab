@@ -46,3 +46,4 @@ MonoBehaviour:
   _blueSliderOutEvent: {fileID: 11400000, guid: 695bba7ace7b94555a51fc85565794e8, type: 2}
   _pinkSliderOutEvent: {fileID: 11400000, guid: 9fdd943232d7649439d3c4c79bf97402, type: 2}
   _levelCompletedEvent: {fileID: 11400000, guid: 4cde089823ebf44b89d0b6c70b8c331c, type: 2}
+  _reloadLevelEvent: {fileID: 11400000, guid: 105d205b0c2864c1786e9d5fc505509d, type: 2}
