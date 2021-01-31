@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 4141780568563212250}
   - component: {fileID: 2508073398464705242}
   - component: {fileID: 5884486200910872687}
+  - component: {fileID: 337093546}
   - component: {fileID: 4260410731774796860}
   m_Layer: 0
   m_Name: PinkSlider
-  m_TagString: Untagged
+  m_TagString: PinkSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +101,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.95
+  m_Radius: 0.98
 --- !u!50 &5884486200910872687
 Rigidbody2D:
   serializedVersion: 4
@@ -122,6 +123,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &337093546
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4141780568563212251}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98dec0a6c1c454d548c580eb7bff6887, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4260410731774796860
 MonoBehaviour:
   m_ObjectHideFlags: 0
