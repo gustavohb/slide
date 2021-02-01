@@ -14,10 +14,13 @@ public class LevelLoader : MonoBehaviour
 
     [SerializeField] private GameEvent _reloadLevelEvent = default;
 
+    [SerializeField] private IntGameEvent _loadLevelEvent = default;
+
     private void Start()
     {
         _levelCompletedEvent?.AddListener(LoadNextLevel);
         _reloadLevelEvent?.AddListener(ReloadLevel);
+        _loadLevelEvent?.AddListener(LoadLevel);
     }
 
     public void LoadNextLevel()
@@ -49,7 +52,12 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevelCoroutine(currentLevel, delay));
     }
 
-    public void LoadLevel(int levelIndex, float delay = 0f)
+    public void LoadLevel(int levelIndex)
+    {
+        StartCoroutine(LoadLevelCoroutine(levelIndex, 0.0f));
+    }
+
+    public void LoadLevel(int levelIndex, float delay)
     {
         StartCoroutine(LoadLevelCoroutine(levelIndex, delay));
     }
@@ -58,6 +66,7 @@ public class LevelLoader : MonoBehaviour
     {
         _levelCompletedEvent?.RemoveListener(LoadNextLevel);
         _reloadLevelEvent?.RemoveListener(ReloadLevel);
+        _loadLevelEvent?.RemoveListener(LoadLevel);
     }
 
 }

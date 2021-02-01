@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameEvent _levelCompletedEvent = default;
     [SerializeField] private GameEvent _reloadLevelEvent = default;
 
+    [SerializeField] private IntVariable _maxLevelAchieved = default;
+
     public  const string CURRENT_LEVEL_PLAYERPREFS = "currentLevel";
     private const string MAX_LEVEL_ACHIEVED_PLAYERPREFS = "maxLevelAchieved";
 
@@ -33,6 +35,8 @@ public class GameManager : MonoBehaviour
                 _blueSliderCount++;
             }
         }
+
+        _maxLevelAchieved.Value = PlayerPrefs.GetInt(MAX_LEVEL_ACHIEVED_PLAYERPREFS, 1); ;
 
     }
 
@@ -71,15 +75,15 @@ public class GameManager : MonoBehaviour
 
     private void SaveLevelPosition()
     {
-        int currentLevel = SceneManager.GetActiveScene().buildIndex + 1;
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
 
         PlayerPrefs.SetInt(CURRENT_LEVEL_PLAYERPREFS, currentLevel);
 
-        int maxLevelAchieved = PlayerPrefs.GetInt(MAX_LEVEL_ACHIEVED_PLAYERPREFS, 1);
-
-        if (currentLevel > maxLevelAchieved)
+        if (currentLevel > _maxLevelAchieved.Value)
         {
             PlayerPrefs.SetInt(MAX_LEVEL_ACHIEVED_PLAYERPREFS, currentLevel);
+            PlayerPrefs.Save();
+            _maxLevelAchieved.Value = currentLevel;
         }
     }
 
