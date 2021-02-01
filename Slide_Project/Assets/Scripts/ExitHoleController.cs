@@ -14,11 +14,13 @@ public class ExitHoleController : MonoBehaviour
 		if (col.tag == _blueSliderTag)
 		{
 			col.GetComponent<SliderController>()?.SetIsOutTrue();
+			SoundManager.PlaySound(SoundManager.Sound.BlueSliderOut);
 			_blueSliderOutEvent?.Raise();
 		}
 		else if (col.tag == _pinkSliderTag)
 		{
 			col.GetComponent<SliderController>()?.SetIsOutTrue();
+			SoundManager.PlaySound(SoundManager.Sound.PinkSliderOut);
 			_pinkSliderOutEvent?.Raise();
 		}
 	}

@@ -71,7 +71,6 @@ public class TouchController : MonoBehaviour
         {
             _isMoving = false;
         }
-
     }
 
     private void FixedUpdate()
@@ -97,6 +96,8 @@ public class TouchController : MonoBehaviour
                     _moveLeftEvent?.Raise();
                 }
 
+                SoundManager.PlaySound(SoundManager.Sound.SliderMove);
+
                 _touchStart = false;
             }
             else if (absYDir > absXDir && absYDir >= _minMoveTouchDistance)
@@ -111,6 +112,8 @@ public class TouchController : MonoBehaviour
                 {
                     _moveDownEvent?.Raise();
                 }
+
+                SoundManager.PlaySound(SoundManager.Sound.SliderMove);
 
                 _touchStart = false;
             }
