@@ -4,7 +4,7 @@ using ScriptableObjectArchitecture;
 public class TouchController : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private float _moveDuration = 0.5f;
+    [SerializeField] private FloatVariable _moveDuration = default;
     [SerializeField] private float _minMoveTouchDistance = 0.5f;
 
     [Header("References")]
@@ -85,7 +85,7 @@ public class TouchController : MonoBehaviour
 
             if (absXDir > absYDir && absXDir >= _minMoveTouchDistance)
             {
-                _moveTimer = _moveDuration;
+                _moveTimer = _moveDuration.Value;
 
                 if (direction.x > 0)
                 {
@@ -102,7 +102,7 @@ public class TouchController : MonoBehaviour
             }
             else if (absYDir > absXDir && absYDir >= _minMoveTouchDistance)
             {
-                _moveTimer = _moveDuration;
+                _moveTimer = _moveDuration.Value;
 
                 if (direction.y > 0)
                 {
