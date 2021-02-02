@@ -10,9 +10,13 @@ public class GameMenuUI : MonoBehaviour
 
     [SerializeField] private Animator _animator;
 
-    [SerializeField] private string _showMenuParamterID = "showMenu";
+    [SerializeField] private string _showMenuParameterID = "showMenu";
 
     [SerializeField] private GameObject _closeButton;
+    [SerializeField] private GameObject _soundOnIcon;
+    [SerializeField] private GameObject _soundOffIcon;
+
+    [SerializeField] private GameObject _quitWindowGO;
 
     private bool _isMenuOpen = false;
 
@@ -24,6 +28,8 @@ public class GameMenuUI : MonoBehaviour
         }
 
         _closeButton.SetActive(false);
+
+        UpdateSoundButtonUI();
     }
 
     public void ToggleMenu()
@@ -31,13 +37,13 @@ public class GameMenuUI : MonoBehaviour
         if (!_isMenuOpen)
         {
             _openCloseMenuEvent.Raise(true);
-            _animator?.SetBool(_showMenuParamterID, true);
+            _animator?.SetBool(_showMenuParameterID, true);
             _closeButton.SetActive(true);
         }
         else
         {
             _openCloseMenuEvent.Raise(false);
-            _animator?.SetBool(_showMenuParamterID, false);
+            _animator?.SetBool(_showMenuParameterID, false);
             _closeButton.SetActive(false);
         }
 
@@ -49,9 +55,20 @@ public class GameMenuUI : MonoBehaviour
         _reloadLevelEvent?.Raise();
     }
 
-    public void ShowQuitPopup()
+    public void OpenQuitWindow()
     {
-        //TODO
-        Debug.Log("Show quit popup");
+        _quitWindowGO?.SetActive(true);
+    }
+
+    public void ToggleSound()
+    {
+        SoundManager.ToggleSound();
+        UpdateSoundButtonUI();
+    }
+
+    private void UpdateSoundButtonUI()
+    {
+        _soundOnIcon?.SetActive(!SoundManager.isMuted);
+        _soundOffIcon?.SetActive(SoundManager.isMuted);
     }
 }
