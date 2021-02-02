@@ -7,7 +7,8 @@ public static class SoundManager
         SliderMove,
         BlueSliderOut,
         PinkSliderOut,
-        TutorialCompleted,
+        LevelCompleted,
+        InvalidMovement,
     }
 
     private static GameObject _oneShotGameObject;

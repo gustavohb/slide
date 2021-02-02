@@ -16,6 +16,8 @@ public class LevelLoader : MonoBehaviour
 
     [SerializeField] private IntGameEvent _loadLevelEvent = default;
 
+    private const string MAX_LEVEL_ACHIEVED_PLAYERPREFS = "maxLevelAchieved";
+
     private void Start()
     {
         _levelCompletedEvent?.AddListener(LoadNextLevel);
@@ -46,9 +48,9 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevelCoroutine(SceneManager.GetActiveScene().buildIndex));
     }
 
-    public void LoadCurrentLevel(float delay = 0f)
+    public void LoadLastAchievedLevel(float delay = 0f)
     {
-        int currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
+        int currentLevel = PlayerPrefs.GetInt(MAX_LEVEL_ACHIEVED_PLAYERPREFS, 1);
         StartCoroutine(LoadLevelCoroutine(currentLevel, delay));
     }
 

@@ -12,6 +12,6 @@ public class IntroScreenController : MonoBehaviour
             _levelLoader = FindObjectOfType<LevelLoader>();
         }
         
-        _levelLoader?.LoadCurrentLevel(_loadLevelDelay);
+        _levelLoader?.LoadLastAchievedLevel(_loadLevelDelay);
     }
 }

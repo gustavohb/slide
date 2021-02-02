@@ -48,3 +48,4 @@ MonoBehaviour:
   _levelCompletedEvent: {fileID: 11400000, guid: 4cde089823ebf44b89d0b6c70b8c331c, type: 2}
   _reloadLevelEvent: {fileID: 11400000, guid: 105d205b0c2864c1786e9d5fc505509d, type: 2}
   _maxLevelAchieved: {fileID: 11400000, guid: f6f090538738f4e98b9ad9759aad89c2, type: 2}
+  _isTutorial: 0
