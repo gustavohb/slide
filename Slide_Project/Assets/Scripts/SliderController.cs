@@ -21,7 +21,7 @@ public class SliderController : MonoBehaviour
 
     private const float _moveForce = 1000;
     
-    public bool _isOut { private set; get; }
+    public bool isOut { private set; get; }
     private bool _isMoving;
     private float _moveTimer;
 
@@ -35,7 +35,7 @@ public class SliderController : MonoBehaviour
 
         _animator = GetComponent<Animator>();
 
-        _isOut = false;
+        isOut = false;
 
         _stopPosition = transform.position;
 
@@ -59,18 +59,18 @@ public class SliderController : MonoBehaviour
 
     private void Update()
     {
-        if (_isOut)
+        if (isOut)
         {
             _rigidbody.velocity = new Vector2(0, 0);
 
-            _animator?.SetBool("IsOut", _isOut);
+            _animator?.SetBool("IsOut", isOut);
         }
 
         if (_isMoving) _moveTimer -= Time.deltaTime;
 
         if (_moveTimer <= 0)
         {
-            if (_isMoving || !_isOut)
+            if (_isMoving || !isOut)
             {
                 StopMove();
                 _stopPosition = transform.position;
@@ -80,7 +80,7 @@ public class SliderController : MonoBehaviour
 
     public void MoveRight()
     {
-        if (_isOut || _isMoving) return;
+        if (isOut || _isMoving) return;
         _dirX = _moveForce;
         _dirY = 0;
         _isMoving = true;
@@ -89,7 +89,7 @@ public class SliderController : MonoBehaviour
 
     public void MoveLeft()
     {
-        if (_isOut || _isMoving) return;
+        if (isOut || _isMoving) return;
         _dirX = -_moveForce;
         _dirY = 0;
         _isMoving = true;
@@ -98,7 +98,7 @@ public class SliderController : MonoBehaviour
 
     public void MoveUp()
     {
-        if (_isOut || _isMoving) return;
+        if (isOut || _isMoving) return;
         _dirX = 0;
         _dirY = _moveForce;
         _isMoving = true;
@@ -107,7 +107,7 @@ public class SliderController : MonoBehaviour
 
     public void MoveDown()
     {
-        if (_isOut || _isMoving) return;
+        if (isOut || _isMoving) return;
         _dirX = 0;
         _dirY = -_moveForce;
         _isMoving = true;
@@ -124,9 +124,12 @@ public class SliderController : MonoBehaviour
 
     public void SetIsOutTrue()
     {
-        _isOut = true;
-        _stopPosition = transform.position;
-        StopMove();
+        if (!isOut)
+        {
+            isOut = true;
+            _stopPosition = transform.position;
+            StopMove();
+        }
     }
 
     private void OnDestroy()
