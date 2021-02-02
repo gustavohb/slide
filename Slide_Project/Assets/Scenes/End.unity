@@ -134,16 +134,16 @@ GameObject:
   - component: {fileID: 147634971}
   - component: {fileID: 147634973}
   - component: {fileID: 147634974}
-  - component: {fileID: 147634972}
-  - component: {fileID: 147634975}
   - component: {fileID: 147634976}
+  - component: {fileID: 147634975}
+  - component: {fileID: 147634972}
   m_Layer: 5
   m_Name: EndGameMessageWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &147634971
 RectTransform:
   m_ObjectHideFlags: 0
@@ -164,25 +164,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &147634972
-Animator:
-  serializedVersion: 3
+--- !u!114 &147634972
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147634970}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f358c80d6cd8548eea878bed379f5c6d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18620e07ffd9a4e9b84daaa3aaaa8f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _closeWindowParameterID: close
 --- !u!222 &147634973
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -203,19 +197,25 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &147634975
-MonoBehaviour:
+--- !u!95 &147634975
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147634970}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18620e07ffd9a4e9b84daaa3aaaa8f6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _closeWindowParameterID: close
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f358c80d6cd8548eea878bed379f5c6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &147634976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 147634975}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EndGameMessageWindowController, Assembly-CSharp
         m_MethodName: CloseWindow
         m_Mode: 1
@@ -585,6 +585,7 @@ GameObject:
   - component: {fileID: 1515162061}
   - component: {fileID: 1515162060}
   - component: {fileID: 1515162059}
+  - component: {fileID: 1515162063}
   m_Layer: 5
   m_Name: EndGameCanvas
   m_TagString: Untagged
@@ -673,6 +674,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &1515162063
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515162058}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b14cffa3f69d0490789480a4607fbc20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1945867917
 GameObject:
   m_ObjectHideFlags: 0
