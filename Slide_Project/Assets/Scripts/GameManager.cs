@@ -12,8 +12,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private IntVariable _maxLevelAchieved = default;
 
-    [SerializeField] private bool _isTutorial = false;
-
     private const string MAX_LEVEL_ACHIEVED_PLAYERPREFS = "maxLevelAchieved";
 
     private List<SliderController> _sliders;
@@ -47,7 +45,7 @@ public class GameManager : MonoBehaviour
     {
         _blueSliderCount--;
 
-        if (LevelHasFinished() && !_isTutorial)
+        if (LevelHasFinished())
         {
             Invoke("MoveToNextLevel", 0.5f);
         }

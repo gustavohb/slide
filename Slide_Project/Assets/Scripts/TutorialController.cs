@@ -215,7 +215,6 @@ public class TutorialController : MonoBehaviour
         if (_currentStep > 3)
         {
             _congratulationsMessageWindow.OpenWindow();
-            SoundManager.PlaySound(SoundManager.Sound.LevelCompleted);
             _messageWindowIsOpen = true;
         }
     }

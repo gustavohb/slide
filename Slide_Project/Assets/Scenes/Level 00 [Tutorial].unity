@@ -2999,6 +2999,10 @@ PrefabInstance:
       propertyPath: _isTutorial
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 367324405847025224, guid: 8d65d7387bb5e4a939fc6ec6a32bdff3, type: 3}
+      propertyPath: _levelCompletedEvent
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 367324405847025225, guid: 8d65d7387bb5e4a939fc6ec6a32bdff3, type: 3}
       propertyPath: m_RootOrder
       value: 1

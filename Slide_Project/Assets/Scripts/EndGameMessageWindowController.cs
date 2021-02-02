@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class TutorialMessageWindow : MonoBehaviour
+public class EndGameMessageWindowController : MonoBehaviour
 {
     [SerializeField] private string _closeWindowParameterID = "close";
 
@@ -21,5 +21,20 @@ public class TutorialMessageWindow : MonoBehaviour
     public void CloseWindow()
     {
         _animator.SetBool(_closeWindowParameterID, true);
+    }
+
+
+    private void OnDisable()
+    {
+        QuitApplication();
+    }
+
+    public void QuitApplication()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+      Application.Quit();
+#endif
     }
 }
