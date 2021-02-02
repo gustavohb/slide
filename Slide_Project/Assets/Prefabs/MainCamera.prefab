@@ -213,3 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _viewArea: {fileID: 1096771310}
+  _openCloseMenuEvent: {fileID: 11400000, guid: 536ebcdbfb5204a539640e333be21d1f, type: 2}
+  _shrinkFactor: 5
+  _shrinkDuration: 0.5
+  _shrinkEase: 28

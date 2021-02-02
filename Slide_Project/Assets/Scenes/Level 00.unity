@@ -757,10 +757,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8395376530158659537, guid: b574ef52f9a094e0788e17d97078627f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -411
-      objectReference: {fileID: 0}
     - target: {fileID: 8395376530391840450, guid: b574ef52f9a094e0788e17d97078627f, type: 3}
       propertyPath: m_Name
       value: GameUI
@@ -848,14 +844,6 @@ PrefabInstance:
     - target: {fileID: 8395376530391840454, guid: b574ef52f9a094e0788e17d97078627f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8395376530391840455, guid: b574ef52f9a094e0788e17d97078627f, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
-    - target: {fileID: 8395376530391840455, guid: b574ef52f9a094e0788e17d97078627f, type: 3}
-      propertyPath: m_RenderMode
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b574ef52f9a094e0788e17d97078627f, type: 3}
