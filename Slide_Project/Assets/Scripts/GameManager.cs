@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        _maxLevelAchieved.Value = PlayerPrefs.GetInt(MAX_LEVEL_ACHIEVED_PLAYERPREFS, 0); ;
+
         SaveLevelPosition();
 
         _blueSliderOutEvent?.AddListener(OnBlueSliderOut);
@@ -36,9 +38,6 @@ public class GameManager : MonoBehaviour
                 _blueSliderCount++;
             }
         }
-
-        _maxLevelAchieved.Value = PlayerPrefs.GetInt(MAX_LEVEL_ACHIEVED_PLAYERPREFS, 0); ;
-
     }
 
     private void OnBlueSliderOut()
