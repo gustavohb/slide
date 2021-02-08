@@ -6,7 +6,7 @@ Slide is a minimalist mobile puzzle game where the player must move the blue sl
 
 ![GithubScreenshots](https://user-images.githubusercontent.com/3193712/106791478-b7ec1600-6633-11eb-9be3-b95051139ca2.png)
 
-[![google-play-badge](https://user-images.githubusercontent.com/3193712/106790693-ab1af280-6632-11eb-9504-e22572195983.png)](https://play.google.com/store/apps/developer?id=Gustavo+Barrionuevo)
+[![google-play-badge](https://user-images.githubusercontent.com/3193712/106790693-ab1af280-6632-11eb-9504-e22572195983.png)](https://play.google.com/store/apps/details?id=com.GustavoBarrionuevo.Slide)
 
 ## License
 
