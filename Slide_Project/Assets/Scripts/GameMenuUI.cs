@@ -20,6 +20,11 @@ public class GameMenuUI : MonoBehaviour
 
     private bool _isMenuOpen = false;
 
+    public bool isOpen
+    {
+        get { return _isMenuOpen; }
+    }
+
     private void Start()
     {
         if (_animator == null)
@@ -48,6 +53,14 @@ public class GameMenuUI : MonoBehaviour
         }
 
         _isMenuOpen = !_isMenuOpen;
+    }
+
+    public void CloseMenu()
+    {
+        if(_isMenuOpen)
+        {
+            ToggleMenu();
+        }
     }
 
     public void ReloadLevel()

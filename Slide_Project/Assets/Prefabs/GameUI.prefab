@@ -2482,6 +2482,7 @@ GameObject:
   - component: {fileID: 4780565912387895559}
   - component: {fileID: 4780565912387895552}
   - component: {fileID: 4780565912387895553}
+  - component: {fileID: 2981987065756076744}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -2547,7 +2548,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 2160, y: 3840}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -2571,6 +2572,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2981987065756076744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780565912387895554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249bdfad20af94794ba594c4bcb28612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _quitWindowController: {fileID: 2197037577343589859}
+  _gameMenuUI: {fileID: 3951245835159083137}
 --- !u!1 &6644184727917407072
 GameObject:
   m_ObjectHideFlags: 0
